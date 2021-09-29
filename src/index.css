@@ -1,13 +1,44 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+/* fonts  */
+/* 
+font-family: 'Balsamiq Sans', cursive;
+font-family: 'Dancing Script', cursive; 
+*/
+
+:root{
+  
+  --primary: #2A0944;
+  --secondary: #3B185F;
+  --third: #A12568;
+  --accent: #FEC260;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--primary);
+  font-family: 'Balsamiq Sans', cursive;
+  color: #fafafa;
+  margin: 0;
+}
+
+button{
+  background-color: transparent;
+  padding: 1rem;
+  border: 0;
+  font-size: 1.4rem;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+button:hover {
+
+}
+
+.pa{
+  position: absolute !important;
 }

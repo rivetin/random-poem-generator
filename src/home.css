@@ -1,0 +1,110 @@
+.home{
+    display: flex;
+}
+
+.home__lines{
+    width: 30vw;
+    height: 76vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.home__lines::-webkit-scrollbar{
+    background-color: transparent;
+    width: 2px;
+}
+
+.home__lines::-webkit-scrollbar-thumb {
+    background: #fec16057; 
+    border-radius: 50%;
+}
+
+.home__lines button{
+    right: 2rem;
+    top: 5.5rem;
+    opacity: .5;
+}
+
+.home__lines p:nth-child(-n + 3){
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+}
+
+.home__line{
+    /* height: 1rem; */
+    color: rgba(255, 255, 255, 0.5);
+    font-size: .9rem;
+}
+
+.home__author{
+    bottom: 2rem;
+    left: 4rem;
+}
+
+.home__randomBtn{
+    left: 5rem;
+    top: 1rem;
+    transform: rotate(50deg);
+    transition: .3s;
+    z-index: 2;
+}
+
+.rotateBtn{
+    animation: spin 1s linear infinite;
+}
+
+.home__p1{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    position: relative;
+}
+
+.home__p2{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.home__p2 img{
+    width: 33vw;
+    height: 100%;
+    object-fit: contain;
+    top: -20vh;
+    left: 3rem;
+}
+
+.home__p2 h2{
+    z-index: 2;
+    font-family: 'Dancing Script', cursive; 
+    font-size: 3rem;
+    color:  var(--accent);
+    width: 34vw;
+    text-align: center;
+    position: absolute;
+    bottom: 5rem;
+    right: 2.1em;
+}
+
+.home__savedBtn{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .8rem;
+    opacity: .4;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(50deg), scale(1.3);
+    }
+    100%{
+        transform: rotate(360deg) scale(1.3);
+    }
+}
