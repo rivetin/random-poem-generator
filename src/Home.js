@@ -2,6 +2,8 @@ import './home.css';
 import {useEffect, useState} from 'react';
 import authors from './authors';
 import backgroudImage from './images/bg_1.jpg';
+import {Link} from 'react-router-dom';
+import {setData} from './useLS';
 
 function Home() {
 
@@ -21,6 +23,7 @@ function Home() {
                 setIsLoading(false);
             }
         })
+        setIsSaved(false);
     }
 
     useEffect(() => {
@@ -30,13 +33,28 @@ function Home() {
     },[]);
 
     const handleSave = () => {
+
+        // let notes = [{
+
+        // }];
+
+        // const fromLS = getData();
+
+        // if(fromLS !== null){
+            
+        // }
+
+        setData(poem[0].title, poem[0].author)
+
         setIsSaved(!isSaved)
     }
 
-    console.log("banana fever");
+    console.log(poem);
 
     return (
         <div className='home'>
+
+
 
             <button onClick={getThePoem} className={`home__randomBtn pa ${isLoading && 'rotateBtn'}`}> <i class="fas fa-dice-five"></i></button>
 
@@ -63,7 +81,9 @@ function Home() {
                 <img src={backgroudImage} alt='bg' className='pa'></img>
             </div>
 
-            <button onClick={''} className='home__savedBtn pa'>View saved</button>
+            <Link to='/saved' className='home__savedBtn pa'>View saved</Link>
+
+            <span className='madewithlove pa'>Made with 💘 by <a href='https://github.com/Ebinu-s' alt='link targeting ebinu' target='_blank' >Ebinu Suneer</a></span>
 
         </div>
     )

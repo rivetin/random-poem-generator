@@ -24,6 +24,17 @@ body{
   font-family: 'Balsamiq Sans', cursive;
   color: #fafafa;
   margin: 0;
+  height: 100vh;
+}
+
+#bgVideo{
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: .6;
 }
 
 button{
@@ -35,10 +46,27 @@ button{
   cursor: pointer;
 }
 
-button:hover {
+a{
+  color: #fff;
+  text-decoration: none;
+}
 
+a:hover{
+  color: var(--accent);
 }
 
 .pa{
   position: absolute !important;
+}
+
+
+.madewithlove{
+  bottom: .5rem;
+  right: 1rem;
+  opacity: .7;
+  font-size: .8rem;
+}
+
+.madewithlove a{
+  color: inherit;
 }
