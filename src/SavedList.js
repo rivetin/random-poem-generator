@@ -19,7 +19,8 @@ function SavedList() {
             <Link to='/' className='savedList__home'><i class="fas fa-home"></i></Link>
             <h1>Saved poems</h1>
             <div className='savedlist__link'>
-                {poems.map(poem => (<Link to={`/poem/${poem.author}/${poem.title}`}> {poem.title} </Link> ))}
+                {poems &&poems.map(poem => (<Link to={`/poem/${poem.author}/${poem.title}`}> {poem.title} </Link> )) }
+               
             </div>
         </div>
     )
